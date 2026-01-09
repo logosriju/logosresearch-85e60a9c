@@ -1,0 +1,49 @@
+{
+  "certificates": [
+    {
+      "certificateNumber": "LOGOS-2024-FDM-001",
+      "participantName": "Rahul Sharma",
+      "courseName": "FDM 3D Printing Fundamentals",
+      "location": "IIT Delhi",
+      "dateOfIssue": "2024-03-15",
+      "duration": "3 Days",
+      "remarks": "Successfully completed with distinction"
+    },
+    {
+      "certificateNumber": "LOGOS-2024-ADV-002",
+      "participantName": "Priya Patel",
+      "courseName": "Advanced Additive Manufacturing",
+      "location": "NIT Trichy",
+      "dateOfIssue": "2024-04-20",
+      "duration": "5 Days",
+      "remarks": "Completed with practical project"
+    },
+    {
+      "certificateNumber": "LOGOS-2024-RND-003",
+      "participantName": "Amit Kumar",
+      "courseName": "R&D Methodology in 3D Printing",
+      "location": "BITS Pilani",
+      "dateOfIssue": "2024-05-10",
+      "duration": "2 Days",
+      "remarks": "Faculty Development Program"
+    },
+    {
+      "certificateNumber": "LOGOS-2024-MAT-004",
+      "participantName": "Sneha Reddy",
+      "courseName": "Materials for Additive Manufacturing",
+      "location": "VIT Vellore",
+      "dateOfIssue": "2024-06-05",
+      "duration": "4 Days",
+      "remarks": "Industry-Academia Workshop"
+    },
+    {
+      "certificateNumber": "LOGOS-2024-PRO-005",
+      "participantName": "Vikram Singh",
+      "courseName": "Prototyping Masterclass",
+      "location": "Anna University",
+      "dateOfIssue": "2024-07-22",
+      "duration": "3 Days",
+      "remarks": "Hands-on intensive training"
+    }
+  ]
+}
