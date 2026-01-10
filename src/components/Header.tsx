@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Printer } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center">
-              <Printer className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img src={logoImage} alt="LOGOS Research Technologies" className="h-12 w-auto" />
             <div className="flex flex-col">
               <span className="font-bold text-lg text-foreground leading-tight">LOGOS</span>
               <span className="text-xs text-muted-foreground leading-tight">Research Technologies</span>
