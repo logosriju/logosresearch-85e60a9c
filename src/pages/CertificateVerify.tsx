@@ -1,9 +1,8 @@
-import { useState } from "react";
-import { Search, CheckCircle, XCircle, Award, Calendar, MapPin, Clock, FileText } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Search, CheckCircle, XCircle, Award, Calendar, MapPin, Clock, FileText, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import certificatesData from "@/data/certificates.json";
 
 interface Certificate {
   certificateNumber: string;
@@ -14,6 +13,22 @@ interface Certificate {
   duration: string;
   remarks: string;
 }
+// Parse CSV text into array of certificates
+const parseCSV = (csvText: string): Certificate[] => {
+  const lines = csvText.trim().split('\n');
+  if (lines.length < 2) return [];
+  
+  const headers = lines[0].split(',').map(h => h.trim());
+  
+  return lines.slice(1).map(line => {
+    const values = line.split(',').map(v => v.trim());
+    const cert: Record<string, string> = {};
+    headers.forEach((header, index) => {
+      cert[header] = values[index] || '';
+    });
+    return cert as unknown as Certificate;
+  });
+};
 
 const CertificateVerify = () => {
   const [searchName, setSearchName] = useState("");
@@ -22,6 +37,23 @@ const CertificateVerify = () => {
   const [searchResult, setSearchResult] = useState<Certificate | null>(null);
   const [searched, setSearched] = useState(false);
   const [error, setError] = useState("");
+  const [certificates, setCertificates] = useState<Certificate[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Load certificates from CSV on mount
+  useEffect(() => {
+    fetch('/certificates.csv')
+      .then(response => response.text())
+      .then(csvText => {
+        const parsed = parseCSV(csvText);
+        setCertificates(parsed);
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
+        setError("Failed to load certificate data");
+      });
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,8 +65,6 @@ const CertificateVerify = () => {
       setError("Please enter the participant name");
       return;
     }
-
-    const certificates: Certificate[] = certificatesData.certificates;
     
     const result = certificates.find((cert) => {
       const nameMatch = cert.participantName.toLowerCase().includes(searchName.toLowerCase().trim());
@@ -133,9 +163,18 @@ const CertificateVerify = () => {
                 )}
 
                 <div className="flex gap-3 pt-2">
-                  <Button type="submit" className="flex-1">
-                    <Search className="w-4 h-4 mr-2" />
-                    Verify Certificate
+                  <Button type="submit" className="flex-1" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Loading...
+                      </>
+                    ) : (
+                      <>
+                        <Search className="w-4 h-4 mr-2" />
+                        Verify Certificate
+                      </>
+                    )}
                   </Button>
                   <Button type="button" variant="outline" onClick={handleReset}>
                     Reset

@@ -47,29 +47,36 @@ Create a `.htaccess` file in your root directory with:
 ## Certificate Verification System
 
 ### How It Works
-The certificate verification uses a JSON file (`src/data/certificates.json`) for data storage. This is searched client-side using JavaScript.
+The certificate verification uses a **CSV file** (`public/certificates.csv`) that you can easily edit with Excel, Google Sheets, or any spreadsheet software.
 
-### Updating Certificate Data
-1. Edit `src/data/certificates.json`
-2. Rebuild the project
-3. Re-upload the built files
+### Updating Certificate Data (Easy Method)
 
-### JSON Structure
-```json
-{
-  "certificates": [
-    {
-      "certificateNumber": "LOGOS-2024-FDM-001",
-      "participantName": "Rahul Sharma",
-      "courseName": "FDM 3D Printing Fundamentals",
-      "location": "IIT Delhi",
-      "dateOfIssue": "2024-03-15",
-      "duration": "3 Days",
-      "remarks": "Successfully completed with distinction"
-    }
-  ]
-}
+1. **Open Excel or Google Sheets**
+2. Create columns with these exact headers (first row):
+   - `certificateNumber`
+   - `participantName`
+   - `courseName`
+   - `location`
+   - `dateOfIssue` (format: YYYY-MM-DD, e.g., 2024-03-15)
+   - `duration`
+   - `remarks`
+
+3. Add one certificate per row
+4. **Save as CSV** (In Excel: File → Save As → CSV UTF-8)
+5. Upload to `public/certificates.csv` on your server (or `dist/certificates.csv` after build)
+
+### Example CSV Format
+```csv
+certificateNumber,participantName,courseName,location,dateOfIssue,duration,remarks
+LOGOS-2024-FDM-001,Rahul Sharma,FDM 3D Printing Fundamentals,IIT Delhi,2024-03-15,3 Days,Successfully completed
+LOGOS-2024-ADV-002,Priya Patel,Advanced Additive Manufacturing,NIT Trichy,2024-04-20,5 Days,Completed with practical project
 ```
+
+### Important Notes
+- **No rebuild required!** Just replace the CSV file on your server
+- Column headers must match exactly (case-sensitive)
+- Don't include commas in your data (or the parsing will break)
+- Date format: YYYY-MM-DD (e.g., 2024-03-15 for March 15, 2024)
 
 ### Alternative: PHP Backend (for easier updates)
 If you prefer PHP-based updates without rebuilding:
