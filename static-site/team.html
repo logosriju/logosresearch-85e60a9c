@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Verify the authenticity of certificates issued by LOGOS Research Technologies.">
-  <title>Certificate Verification - LOGOS Research Technologies</title>
+  <meta name="description" content="Meet the leadership team at LOGOS Research Technologies — experts in research, additive manufacturing, and software development.">
+  <title>Our Team - LOGOS Research Technologies</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,9 +23,9 @@
         <div class="nav-desktop">
           <a href="index.html" class="nav-link">Home</a>
           <a href="services.html" class="nav-link">Services</a>
-          <a href="team.html" class="nav-link">Team</a>
+          <a href="team.html" class="nav-link active">Team</a>
           <a href="brochures.html" class="nav-link">Brochures</a>
-          <a href="verify.html" class="nav-link active">Verify Certificate</a>
+          <a href="verify.html" class="nav-link">Verify Certificate</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </div>
 
@@ -43,9 +43,9 @@
         <div class="nav-mobile-links">
           <a href="index.html" class="nav-link">Home</a>
           <a href="services.html" class="nav-link">Services</a>
-          <a href="team.html" class="nav-link">Team</a>
+          <a href="team.html" class="nav-link active">Team</a>
           <a href="brochures.html" class="nav-link">Brochures</a>
-          <a href="verify.html" class="nav-link active">Verify Certificate</a>
+          <a href="verify.html" class="nav-link">Verify Certificate</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </div>
       </div>
@@ -53,80 +53,91 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="page-hero hero-gradient">
-      <div class="section-container text-center" style="color: white;">
-        <h1 class="page-hero-title">Certificate Verification</h1>
-        <p class="hero-description">
-          Verify the authenticity of certificates issued by LOGOS Research Technologies
-        </p>
-      </div>
-    </section>
-
-    <!-- Search Form -->
-    <section class="page-section">
+    <!-- Page Hero -->
+    <section class="hero hero-gradient">
       <div class="section-container">
-        <div style="max-width: 42rem; margin: 0 auto;">
-          <div class="card">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
-              <div style="width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; background: var(--hero-gradient); display: flex; align-items: center; justify-content: center;">
-                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: white;">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-              </div>
-              <h2 style="font-size: 1.25rem; font-weight: 600;">Search Certificate</h2>
-            </div>
-
-            <form id="verify-form">
-              <div class="form-group">
-                <label class="form-label" for="search-name">Participant Name *</label>
-                <input type="text" id="search-name" class="form-input" placeholder="Enter full name as on certificate">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="search-course">Course / Workshop Name</label>
-                <input type="text" id="search-course" class="form-input" placeholder="e.g., FDM 3D Printing Fundamentals">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="search-location">Location / Institution</label>
-                <input type="text" id="search-location" class="form-input" placeholder="e.g., IIT Delhi">
-              </div>
-
-              <div style="display: flex; gap: 0.75rem; padding-top: 0.5rem;">
-                <button type="submit" class="btn btn-primary" style="flex: 1;">
-                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                  </svg>
-                  Verify Certificate
-                </button>
-                <button type="button" id="reset-btn" class="btn btn-outline">Reset</button>
-              </div>
-            </form>
-          </div>
-
-          <!-- Search Results -->
-          <div id="verify-result"></div>
+        <div class="hero-content">
+          <h1 class="page-hero-title">Our Leadership Team</h1>
+          <p class="hero-description">
+            Meet the experts driving innovation in research, engineering, and technology at LOGOS Research Technologies.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Instructions -->
+    <!-- Team Section -->
+    <section class="page-section">
+      <div class="section-container">
+        <div class="team-grid">
+          <!-- Dr. Daniel Devaraj -->
+          <div class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="images/dr-daniel.jfif" alt="Dr. Daniel Devaraj" class="team-photo">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Daniel Devaraj</h3>
+              <p class="team-qualification">M.E., Ph.D.</p>
+              <span class="team-role">Head – Technical Training</span>
+              <p class="team-description">
+                Dr. Daniel Devaraj has over 5 years of experience in research and academic teaching.
+                He previously served as an Assistant Professor and specializes in Material Science and engineering research.
+                He leads the technical training and research skill development programs at Logos Research Technology.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dr. R. Prayer Riju -->
+          <div class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="images/dr-riju.png" alt="Dr. R. Prayer Riju" class="team-photo">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. R. Prayer Riju</h3>
+              <p class="team-qualification">M.E., Ph.D.</p>
+              <span class="team-role">Head – Research & Development</span>
+              <p class="team-description">
+                Dr. R. Prayer Riju is an expert in Additive Manufacturing and advanced manufacturing technologies.
+                He has more than 5 years of experience in additive manufacturing research, focusing on 3D printing, LPBF processes, and material performance optimization.
+                He leads the research and development division at Logos Research Technology.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dr. Hannah Blessy -->
+          <div class="team-card">
+            <div class="team-photo-wrapper">
+              <img src="images/dr-hannah.png" alt="Dr. Hannah Blessy" class="team-photo">
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Hannah Blessy</h3>
+              <p class="team-qualification">M.E., Ph.D.</p>
+              <span class="team-role">Head – Software Development</span>
+              <p class="team-description">
+                Dr. Hannah Blessy specializes in software development, analytical modelling, and numerical simulations.
+                Her expertise includes developing computational tools and transforming engineering concepts into software solutions.
+                She leads the software development and modelling initiatives at Logos Research Technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="page-section bg-muted">
       <div class="section-container">
-        <div style="max-width: 42rem; margin: 0 auto; text-align: center;">
-          <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">How to Verify</h3>
-          <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
-            Enter the participant's name as it appears on the certificate. 
-            For more accurate results, you can also provide the course name 
-            and location/institution where the training was conducted.
+        <div class="cta-card">
+          <h2 class="cta-title">Want to Work With Our Team?</h2>
+          <p class="cta-description">
+            Get in touch with us for research assistance, training programs, or technology solutions.
           </p>
-          <div class="card" style="display: inline-block; text-align: left;">
-            <p style="font-size: 0.875rem; color: var(--muted-foreground);">
-              <strong>Note:</strong> All certificates issued by LOGOS Research Technologies 
-              are registered in our verification system. If you encounter any issues, 
-              please contact our support team.
-            </p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-primary btn-lg">
+              Contact Us
+              <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -150,9 +161,9 @@
             </div>
           </div>
           <p class="footer-description">
-            Empowering innovation through 3D printing education, research consultancy, 
-            and professional prototyping services. MSME registered company committed 
-            to advancing additive manufacturing in India.
+            LOGOS Research Technologies provides research assistance, additive manufacturing 
+            training, professional prototyping services, and custom software and web 
+            development solutions for academia and industry across India.
           </p>
           <span class="footer-badge">MSME Registered Enterprise</span>
         </div>
@@ -162,6 +173,7 @@
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home</a></li>
             <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="team.html" class="footer-link">Team</a></li>
             <li><a href="brochures.html" class="footer-link">Brochures</a></li>
             <li><a href="verify.html" class="footer-link">Verify Certificate</a></li>
             <li><a href="contact.html" class="footer-link">Contact Us</a></li>
