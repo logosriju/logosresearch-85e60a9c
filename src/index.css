@@ -4,42 +4,42 @@
 
 @layer base {
   :root {
-    /* Professional Blue/Grey Theme for LOGOS Research Technologies */
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    /* Violet-Indigo Theme matching LOGOS logo */
+    --background: 250 20% 98%;
+    --foreground: 250 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 250 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 250 47% 11%;
 
-    /* Professional Blue */
-    --primary: 221 83% 53%;
+    /* Violet Primary */
+    --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Grey */
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    /* Light Violet Grey */
+    --secondary: 255 30% 92%;
+    --secondary-foreground: 250 47% 11%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 250 30% 96%;
+    --muted-foreground: 250 12% 47%;
 
-    /* Accent Blue */
-    --accent: 217 91% 60%;
+    /* Accent Violet */
+    --accent: 270 75% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --border: 255 25% 91%;
+    --input: 255 25% 91%;
+    --ring: 263 70% 50%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(217 91% 60%) 50%, hsl(199 89% 48%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(263 70% 50%) 0%, hsl(270 75% 58%) 50%, hsl(280 65% 55%) 100%);
     --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
