@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import Team from "./pages/Team";
 import Brochures from "./pages/Brochures";
 import CertificateVerify from "./pages/CertificateVerify";
 import Contact from "./pages/Contact";
