@@ -1,4 +1,4 @@
-import { GraduationCap, FlaskConical, Printer, CheckCircle, Users, BookOpen, Microscope, Cog } from "lucide-react";
+import { GraduationCap, FlaskConical, Printer, CheckCircle, Users, BookOpen, Microscope, Cog, Code, Database, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -10,32 +10,31 @@ const Services = () => {
         <div className="section-container text-center text-primary-foreground">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-            Comprehensive 3D printing solutions for education, research, and manufacturing
+            Comprehensive research assistance, professional training, and technology solutions for academia and industry
           </p>
         </div>
       </section>
 
-      {/* Training Section */}
-      <section id="training" className="page-section bg-background scroll-mt-20">
+      {/* 3D Printing & Training Section (FIRST) */}
+      <section id="printing" className="page-section bg-background scroll-mt-20">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-primary-foreground" />
+                  <Printer className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground">3D Printing Training & Workshops</h2>
+                <h2 className="text-3xl font-bold text-foreground">3D Printing & Training</h2>
               </div>
               <p className="text-muted-foreground mb-6">
-                Our comprehensive training programs are designed to bridge the knowledge gap 
-                in additive manufacturing. We offer hands-on, practical sessions that prepare 
-                participants for real-world applications.
+                Industry-focused additive manufacturing training and professional prototyping 
+                services for academic institutions, research labs, and product development teams.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  { icon: <Users className="w-5 h-5" />, title: "College Workshops", desc: "Multi-day workshops for engineering students covering FDM fundamentals to advanced concepts" },
-                  { icon: <BookOpen className="w-5 h-5" />, title: "Faculty Development Programs", desc: "Specialized training for educators to integrate 3D printing into their curriculum" },
-                  { icon: <GraduationCap className="w-5 h-5" />, title: "Student Skill Programs", desc: "Certificate courses focused on industry-relevant skills and practical applications" },
+                  { icon: <GraduationCap className="w-5 h-5" />, title: "Additive Manufacturing Training", desc: "Design to Print — comprehensive FDM-focused workshops for colleges, universities, and faculty" },
+                  { icon: <Cog className="w-5 h-5" />, title: "Rapid Prototyping & Functional Parts", desc: "Research-grade custom specimen fabrication and functional part manufacturing" },
+                  { icon: <Microscope className="w-5 h-5" />, title: "Pilot-Scale Experimental Setups", desc: "Embedded electronics and custom instrumentation for research applications" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="text-primary mt-1">{item.icon}</div>
@@ -51,17 +50,17 @@ const Services = () => {
               </Button>
             </div>
             <div className="bg-muted rounded-xl p-6 lg:p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Training Highlights</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Training & Services</h3>
               <ul className="space-y-3">
                 {[
-                  "FDM technology fundamentals",
-                  "CAD/CAM software training",
-                  "Material selection and properties",
-                  "Printer operation and maintenance",
-                  "Design for additive manufacturing",
-                  "Quality control and troubleshooting",
-                  "Industry case studies",
-                  "Certificate of completion"
+                  "College & University Workshops",
+                  "Faculty Development Programs",
+                  "Student Skill Certification Programs",
+                  "Rapid Prototyping Services",
+                  "Functional Part Manufacturing",
+                  "Design for Additive Manufacturing Support",
+                  "Material Selection & Process Optimization",
+                  "Industrial Application Training"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2 text-muted-foreground">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
@@ -74,22 +73,22 @@ const Services = () => {
         </div>
       </section>
 
-      {/* R&D Section */}
+      {/* Research Assistance Section (SECOND) */}
       <section id="research" className="page-section bg-muted scroll-mt-20">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 bg-card rounded-xl p-6 lg:p-8 card-elevated border border-border">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Research Areas</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Research Support Areas</h3>
               <ul className="space-y-3">
                 {[
-                  "FDM process parameter optimization",
-                  "Novel material development",
-                  "Mechanical property characterization",
-                  "Surface finish improvement techniques",
-                  "Multi-material printing",
-                  "Bio-compatible materials research",
-                  "Sustainability in additive manufacturing",
-                  "Industry 4.0 integration"
+                  "Thesis & Dissertation Assistance",
+                  "UG / PG / PhD Project Guidance",
+                  "Research Article Preparation & Formatting",
+                  "Journal Selection & Submission Support",
+                  "Data Analysis (MATLAB, Python, SPSS, Origin, Excel)",
+                  "Experimental Planning & Result Interpretation",
+                  "Plagiarism Checking & Reduction Guidance",
+                  "Research Ethics & Publication Best Practices"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2 text-muted-foreground">
                     <Microscope className="w-4 h-4 text-primary flex-shrink-0" />
@@ -97,24 +96,34 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
+              <div className="mt-4 pt-4 border-t border-border">
+                <h4 className="font-semibold text-foreground mb-2">Domains Supported:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Engineering & Technology", "Materials Science", "Additive Manufacturing", "Electronics & Devices", "Applied Sciences"].map((d) => (
+                    <span key={d} className="bg-muted text-muted-foreground text-xs px-3 py-1 rounded-full">{d}</span>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center">
                   <FlaskConical className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground">Research & Development Consultancy</h2>
+                <h2 className="text-3xl font-bold text-foreground">Research Assistance & Academic Support</h2>
               </div>
-              <p className="text-muted-foreground mb-6">
-                We provide expert R&D consultancy services for academic institutions and 
-                industries looking to leverage additive manufacturing in their projects. 
-                Our team brings together research expertise and practical experience.
+              <p className="text-muted-foreground mb-2">
+                End-to-end research support with strong ethical and academic standards.
               </p>
-              <div className="space-y-4 mb-8">
+              <p className="text-muted-foreground mb-6">
+                We assist scholars, researchers, and students at every stage of the research 
+                lifecycle — without compromising originality or ethics.
+              </p>
+              <div className="space-y-4 mb-6">
                 {[
-                  { icon: <FlaskConical className="w-5 h-5" />, title: "Academic Research Support", desc: "Guidance for thesis projects, research papers, and academic collaborations" },
-                  { icon: <Cog className="w-5 h-5" />, title: "Industrial R&D", desc: "Process optimization, material selection, and prototype development for industry partners" },
-                  { icon: <Microscope className="w-5 h-5" />, title: "Materials Characterization", desc: "Testing and analysis of 3D printed parts for mechanical and thermal properties" },
+                  { icon: <FlaskConical className="w-5 h-5" />, title: "Thesis & Dissertation Assistance", desc: "Comprehensive support for UG, PG, and PhD research projects from topic selection to final submission" },
+                  { icon: <BookOpen className="w-5 h-5" />, title: "Research Article & Publication Support", desc: "Manuscript preparation, journal formatting, selection and submission guidance" },
+                  { icon: <Microscope className="w-5 h-5" />, title: "Data Analysis & Interpretation", desc: "Expert analysis using MATLAB, Python, SPSS, Origin, Excel and statistical interpretation" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="text-primary mt-1">{item.icon}</div>
@@ -125,35 +134,37 @@ const Services = () => {
                   </div>
                 ))}
               </div>
+              <div className="bg-primary text-primary-foreground rounded-lg p-4 mb-6">
+                <p className="text-sm font-medium">👉 We guide, support, and review — you remain the author.</p>
+              </div>
               <Button asChild>
-                <Link to="/brochures">Download R&D Brochure</Link>
+                <Link to="/contact">Get Research Support</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3D Printing Services Section */}
-      <section id="printing" className="page-section bg-background scroll-mt-20">
+      {/* Web Development & Custom Software Section (THIRD) */}
+      <section id="software" className="page-section bg-background scroll-mt-20">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-lg hero-gradient flex items-center justify-center">
-                  <Printer className="w-6 h-6 text-primary-foreground" />
+                  <Code className="w-6 h-6 text-primary-foreground" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground">3D Printing Services</h2>
+                <h2 className="text-3xl font-bold text-foreground">Web Development & Custom Software</h2>
               </div>
               <p className="text-muted-foreground mb-6">
-                Professional FDM 3D printing services for prototyping and functional part 
-                production. We offer high-quality prints with quick turnaround times and 
-                competitive pricing.
+                We build custom software for academic and research equipment, including lab management, 
+                data acquisition, and monitoring solutions.
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  { icon: <Cog className="w-5 h-5" />, title: "Rapid Prototyping", desc: "Quick iteration of design concepts with high-quality FDM prints" },
-                  { icon: <Printer className="w-5 h-5" />, title: "Functional Parts", desc: "Production of end-use parts with appropriate material selection" },
-                  { icon: <Users className="w-5 h-5" />, title: "Small Batch Production", desc: "Cost-effective manufacturing for limited quantity requirements" },
+                  { icon: <Globe className="w-5 h-5" />, title: "Academic & Research Software", desc: "Custom applications for research data management and academic workflows" },
+                  { icon: <Database className="w-5 h-5" />, title: "Laboratory Software Solutions", desc: "Lab management, equipment monitoring, and data acquisition systems" },
+                  { icon: <Code className="w-5 h-5" />, title: "Scientific Software Development", desc: "Computational tools, simulation software, and research automation" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="text-primary mt-1">{item.icon}</div>
@@ -169,22 +180,24 @@ const Services = () => {
               </Button>
             </div>
             <div className="bg-muted rounded-xl p-6 lg:p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Materials Available</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Services Include</h3>
+              <ul className="space-y-3">
                 {[
-                  { name: "PLA", desc: "General purpose" },
-                  { name: "ABS", desc: "High strength" },
-                  { name: "PETG", desc: "Chemical resistant" },
-                  { name: "TPU", desc: "Flexible parts" },
-                  { name: "Nylon", desc: "Engineering grade" },
-                  { name: "Carbon Fiber", desc: "High performance" },
-                ].map((material, index) => (
-                  <div key={index} className="bg-card rounded-lg p-3 border border-border">
-                    <h4 className="font-semibold text-foreground text-sm">{material.name}</h4>
-                    <p className="text-xs text-muted-foreground">{material.desc}</p>
-                  </div>
+                  "Academic & Research Software",
+                  "Laboratory Software Solutions",
+                  "Scientific Software Development",
+                  "Research Systems & Applications",
+                  "Static & Dynamic Websites",
+                  "E-Commerce & Institutional Portals",
+                  "Research Data Management Systems",
+                  "Custom Business Software & Automation"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-2 text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                    {item}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -194,11 +207,11 @@ const Services = () => {
       <section className="page-section bg-muted">
         <div className="section-container text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-            Have Questions About Our Services?
+            Need Research, Training, or Technology Solutions?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Contact us to discuss your specific requirements. We're here to help you 
-            find the right solution for your needs.
+            From academic research support to industrial prototyping and digital transformation, 
+            we help you move from idea to implementation with confidence.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">Contact Us</Link>

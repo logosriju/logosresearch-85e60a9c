@@ -18,9 +18,9 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm max-w-md mb-4">
-              Empowering innovation through 3D printing education, research consultancy, 
-              and professional prototyping services. MSME registered company committed 
-              to advancing additive manufacturing in India.
+              LOGOS Research Technologies provides research assistance, additive manufacturing 
+              training, professional prototyping services, and custom software and web 
+              development solutions for academia and industry across India.
             </p>
             <div className="inline-block px-3 py-1 bg-primary-foreground/10 rounded-full text-xs">
               MSME Registered Enterprise
@@ -70,17 +70,19 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@logosresearch.tech" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  info@logosresearch.tech
+                <a href="mailto:info@logosresearch.in" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  info@logosresearch.in
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">+91 XXXXX XXXXX</span>
+                <a href="tel:+918144120859" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  +91 81441 20859
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">India</span>
+                <span className="text-primary-foreground/80">Agasteeswaram, Kanyakumari,<br />Tamil Nadu, India - 629701</span>
               </li>
             </ul>
           </div>

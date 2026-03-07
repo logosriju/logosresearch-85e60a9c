@@ -26,7 +26,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Validate form
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
@@ -37,7 +36,6 @@ const Contact = () => {
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({
@@ -49,21 +47,12 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    // In production, replace this with actual form submission logic
-    // Options: FormSpree, EmailJS, or custom PHP endpoint
     setTimeout(() => {
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
       setIsSubmitting(false);
     }, 1000);
   };
@@ -72,19 +61,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      content: "info@logosresearch.tech",
-      link: "mailto:info@logosresearch.tech"
+      content: "info@logosresearch.in",
+      link: "mailto:info@logosresearch.in"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       title: "Phone",
-      content: "+91 XXXXX XXXXX",
-      link: "tel:+91XXXXXXXXXX"
+      content: "+91 81441 20859",
+      link: "tel:+918144120859"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       title: "Location",
-      content: "India",
+      content: "Agasteeswaram, Kanyakumari, Tamil Nadu, India - 629701",
       link: null
     }
   ];
@@ -109,8 +98,7 @@ const Contact = () => {
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
               <p className="text-muted-foreground mb-8">
-                Whether you're interested in our training programs, need R&D consultancy, 
-                or want to discuss a 3D printing project, we're here to help.
+                Whether you need research support, training programs, or technology solutions, we're here to help.
               </p>
 
               <div className="space-y-6">
@@ -122,10 +110,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground">{info.title}</h3>
                       {info.link ? (
-                        <a 
-                          href={info.link} 
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
+                        <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
                           {info.content}
                         </a>
                       ) : (
@@ -154,81 +139,32 @@ const Contact = () => {
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Your name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="mt-1"
-                        required
-                      />
+                      <Input id="name" name="name" type="text" placeholder="Your name" value={formData.name} onChange={handleChange} className="mt-1" required />
                     </div>
                     <div>
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="mt-1"
-                        required
-                      />
+                      <Input id="email" name="email" type="email" placeholder="your@email.com" value={formData.email} onChange={handleChange} className="mt-1" required />
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="+91 XXXXX XXXXX"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="mt-1"
-                      />
+                      <Input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" value={formData.phone} onChange={handleChange} className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        type="text"
-                        placeholder="How can we help?"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="mt-1"
-                      />
+                      <Input id="subject" name="subject" type="text" placeholder="How can we help?" value={formData.subject} onChange={handleChange} className="mt-1" />
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Tell us about your requirements..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="mt-1 min-h-[150px]"
-                      required
-                    />
+                    <Textarea id="message" name="message" placeholder="Tell us about your requirements..." value={formData.message} onChange={handleChange} className="mt-1 min-h-[150px]" required />
                   </div>
 
                   <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
-                    {isSubmitting ? (
-                      <>Sending...</>
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        Send Message
-                      </>
-                    )}
+                    {isSubmitting ? <>Sending...</> : <><Send className="w-4 h-4 mr-2" />Send Message</>}
                   </Button>
                 </form>
 
