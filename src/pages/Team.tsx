@@ -55,7 +55,7 @@ const Team = () => {
                 key={member.name}
                 className={`bg-card rounded-xl overflow-hidden card-elevated border border-border ${staggerClasses[index]}`}
               >
-                <div className="aspect-square overflow-hidden bg-muted">
+                <div className="aspect-[4/5] overflow-hidden bg-muted">
                   <img
                     src={member.image}
                     alt={member.name}
