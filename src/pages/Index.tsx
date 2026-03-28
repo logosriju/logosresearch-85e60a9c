@@ -31,13 +31,13 @@ const Index = () => {
     },
     {
       icon: <Code className="w-7 h-7 text-primary-foreground" />,
-      title: "Web Development & Custom Software",
-      description: "We build custom software for academic and research equipment, including lab management, data acquisition, and monitoring solutions.",
+      title: "IT Solutions & Custom Software",
+      description: "End-to-end digital solutions — websites, database management, event platforms, AI-powered apps, and automation for academia and beyond.",
       features: [
-        "Academic & Research Software",
-        "Laboratory Software Solutions",
-        "Scientific Software Development",
-        "Research Systems & Applications"
+        "Websites & Institutional Portals",
+        "Database Management & Cloud Systems",
+        "Symposium, Conference & Event Platforms",
+        "AI-Powered Apps & Automation Tools"
       ],
       link: "/services#software"
     }
