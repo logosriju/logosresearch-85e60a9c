@@ -4,6 +4,14 @@ import drHannahImg from "@/assets/dr-hannah.png";
 
 const teamMembers = [
   {
+    name: "Dr. Hannah Blessy",
+    qualification: "M.E., Ph.D.",
+    role: "Head – Software Development",
+    image: drHannahImg,
+    description:
+      "Dr. Hannah Blessy specializes in software development, analytical modelling, and numerical simulations. Her expertise includes developing computational tools and transforming engineering concepts into software solutions. She leads the software development and modelling initiatives at Logos Research Technology.",
+  },
+  {
     name: "Dr. Daniel Devaraj",
     qualification: "M.E., Ph.D.",
     role: "Head – Technical Training",
@@ -18,14 +26,6 @@ const teamMembers = [
     image: drRijuImg,
     description:
       "Dr. R. Prayer Riju is an expert in Additive Manufacturing and advanced manufacturing technologies. He has more than 5 years of experience in additive manufacturing research, focusing on 3D printing, LPBF processes, and material performance optimization. He leads the research and development division at Logos Research Technology.",
-  },
-  {
-    name: "Dr. Hannah Blessy",
-    qualification: "M.E., Ph.D.",
-    role: "Head – Software Development",
-    image: drHannahImg,
-    description:
-      "Dr. Hannah Blessy specializes in software development, analytical modelling, and numerical simulations. Her expertise includes developing computational tools and transforming engineering concepts into software solutions. She leads the software development and modelling initiatives at Logos Research Technology.",
   },
 ];
 
