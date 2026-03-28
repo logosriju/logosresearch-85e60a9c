@@ -1,4 +1,4 @@
-import drDanielImg from "@/assets/dr-daniel.jfif";
+import drDanielImg from "@/assets/dr-daniel.jpeg";
 import drRijuImg from "@/assets/dr-riju.png";
 import drHannahImg from "@/assets/dr-hannah.png";
 

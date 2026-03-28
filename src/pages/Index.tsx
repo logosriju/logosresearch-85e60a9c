@@ -31,13 +31,13 @@ const Index = () => {
     },
     {
       icon: <Code className="w-7 h-7 text-primary-foreground" />,
-      title: "Web Development & Custom Software",
-      description: "We build custom software for academic and research equipment, including lab management, data acquisition, and monitoring solutions.",
+      title: "IT Solutions & Custom Software",
+      description: "End-to-end digital solutions — websites, database management, event platforms, AI-powered apps, and automation for academia and beyond.",
       features: [
-        "Academic & Research Software",
-        "Laboratory Software Solutions",
-        "Scientific Software Development",
-        "Research Systems & Applications"
+        "Websites & Institutional Portals",
+        "Database Management & Cloud Systems",
+        "Symposium, Conference & Event Platforms",
+        "AI-Powered Apps & Automation Tools"
       ],
       link: "/services#software"
     }
@@ -56,12 +56,10 @@ const Index = () => {
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center text-primary-foreground">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
-              Advanced Research Support, Professional Training, and Scalable Technology Solutions for Academia and Industry
+              Research Support · Professional Training · Technology Solutions
             </h1>
             <p className="text-lg lg:text-xl text-primary-foreground/90 mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              We provide ethical, end-to-end research assistance, advanced 3D printing training
-              and prototyping services, and scalable web and custom software solutions tailored
-              for academic institutions, researchers, and industries across India.
+              Ethical research assistance, 3D printing &amp; prototyping services, and custom software solutions for academia and industry across India.
             </p>
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <Button asChild size="lg" variant="secondary" className="font-semibold">
